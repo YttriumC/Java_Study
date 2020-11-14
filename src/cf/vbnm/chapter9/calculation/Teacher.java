@@ -2,9 +2,10 @@ package cf.vbnm.chapter9.calculation;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.Random;
 
-public class Teacher {
+public class Teacher implements ActionListener {
 	int numberOne, numberTwo;
 	String operator = "";
 	boolean isRight;
@@ -43,10 +44,26 @@ public class Teacher {
 				if ("+".equals(operator)) {
 					if (result == numberOne + numberTwo) message.setText("correct");
 					else message.setText("wrong");
-				}
-			}catch (NumberFormatException ex){
-				message.setText("请输入字符");
+				} else if ("-".equals(operator))
+					if (result == numberOne - numberTwo)
+						message.setText("correct");
+					else
+						message.setText("wrong");
+			} catch (NumberFormatException ex) {
+				ex.printStackTrace();
+				message.setText("请输入数字字符");
 			}
 		}
+	}
+
+	public void setJTextField(JTextField... t) {
+		textOne = t[0];
+		textTwo = t[1];
+		textResult = t[2];
+	}
+
+	public void setJLabel(JLabel... label) {
+		operatorLabel = label[0];
+		message = label[1];
 	}
 }

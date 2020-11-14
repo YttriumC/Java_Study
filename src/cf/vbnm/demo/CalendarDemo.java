@@ -9,7 +9,7 @@ public class CalendarDemo {
 		Calendar calendar = Calendar.getInstance();
 		Date date = new Date();
 		System.out.println(date.getYear());
-		calendar.set(date.getYear()+1900, date.getMonth(),1);
+		calendar.set(date.getYear() + 1900, date.getMonth(), 1);
 		CalendarDemo demo = new CalendarDemo();
 		demo.printCalender(calendar);
 	}
@@ -21,12 +21,11 @@ public class CalendarDemo {
 		int daysOfMonth;
 		switch (calendar.get(Calendar.MONTH) + 1) {
 			case 2:
-				if (calendar.get(Calendar.YEAR) % 4 == 0) {
+				daysOfMonth = 28;
+				if (calendar.get(Calendar.YEAR) % 4 == 0 &&
+						calendar.get(Calendar.YEAR) % 100 != 0 ||
+						calendar.get(Calendar.YEAR) % 400 == 0)
 					daysOfMonth = 29;
-					if (calendar.get(Calendar.YEAR) % 100 == 0 && !(calendar.get(Calendar.YEAR) % 400 == 0))
-						daysOfMonth = 28;
-				} else
-					daysOfMonth = 28;
 				break;
 			case 1:
 			case 3:

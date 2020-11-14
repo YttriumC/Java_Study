@@ -1,4 +1,4 @@
-package cf.vbnm.acm;
+package cf.vbnm.practice;
 
 import java.util.Scanner;
 import java.util.Stack;

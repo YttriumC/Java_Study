@@ -1,4 +1,4 @@
-package cf.vbnm.acm;
+package cf.vbnm.practice;
 
 public class TwoSum {
 	public static void main(String[] args) {
