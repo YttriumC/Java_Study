@@ -1,9 +1,10 @@
 package cf.vbnm.chapter6.book_animal;
 
-class Dog implements Animal{
+class Dog implements Animal {
 	@Override
 	public void cry() {
-		System.out.println(getAnimalName()+":wang wang");
+		System.out.println(getAnimalName()
+				+ ":汪汪");
 	}
 
 	@Override
@@ -12,10 +13,11 @@ class Dog implements Animal{
 	}
 }
 
-class Cat implements Animal{
+class Cat implements Animal {
 	@Override
 	public void cry() {
-		System.out.println(getAnimalName()+":miao miao");
+		System.out.println(getAnimalName()
+				+ ":喵喵");
 	}
 
 	@Override

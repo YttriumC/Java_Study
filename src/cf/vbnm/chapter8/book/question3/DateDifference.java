@@ -12,8 +12,7 @@ public class DateDifference {
 			dayOne.set(Integer.parseInt(dayOnes[0]), Integer.parseInt(dayOnes[1]) - 1, Integer.parseInt(dayOnes[2]));
 			dayTwo.set(Integer.parseInt(dayTwos[0]), Integer.parseInt(dayTwos[1]) - 1, Integer.parseInt(dayTwos[2]));
 			System.out.println("相差" + Math.abs(
-					dayOne.getTimeInMillis() - dayTwo.getTimeInMillis()) / (1000 * 3600 * 24)
-					+ "天");
+					dayOne.getTimeInMillis() - dayTwo.getTimeInMillis()) / (1000 * 3600 * 24) + "天");
 		} catch (Exception e) {
 			usage();
 		}
