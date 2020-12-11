@@ -1,4 +1,4 @@
-package cf.vbnm.chapter9.book;
+package cf.vbnm.chapter9.book.calculator;
 
 import java.math.BigDecimal;
 import java.math.MathContext;
