@@ -1,0 +1,26 @@
+   1 package cf.vbnm.chapter10.book;
+   2 
+   3 import java.io.*;
+   4 
+   5 public class ReadByLine {
+   6 	public static void main(String[] args) {
+   7 		try {
+   8 			BufferedWriter bw = new BufferedWriter(new FileWriter("out\\readByLineOut.txt"));
+   9 			BufferedReader br = new BufferedReader(new FileReader("out\\readByLine.txt"));
+  10 			String in;
+  11 			int lineNumber = 1;
+  12 			while ((in = br.readLine()) != null) {
+  13 				System.out.printf("%4d %s\n", lineNumber, in);
+  14 				bw.write(String.format("%4d ", lineNumber++));
+  15 				bw.write(in);
+  16 				bw.newLine();
+  17 			}
+  18 			bw.flush();
+  19 			br.close();
+  20 			bw.close();
+  21 		} catch (IOException e) {
+  22 			e.printStackTrace();
+  23 		}
+  24 
+  25 	}
+  26 }
