@@ -1,4 +1,4 @@
-package cf.vbnm.chapter12.buyticket;
+package cf.vbnm.chapter12.book_buyticket;
 
 public class Seller {
 	private int ticketPrice;
